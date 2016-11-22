@@ -86,6 +86,6 @@
   [& args]
   (do (check-env (System/getenv) ["MAIL_USER" "MAIL_PASS" "MAIL_RECIVER" "MAIL_SMTP"])
       (when (= 0 (action!))
-        (println "-------------started!!-----------")
+        (println "-------------started!!------------")
         (send-email (System/getenv "MAIL_RECIVER") "SSSB Watch Alive" "SSSB Watch have started. No objects of interest found at this time."))
       (set-interval action! (* (rand-int 60) 60 1000))))
